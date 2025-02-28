@@ -255,7 +255,7 @@ with st.sidebar:
                 st.success("Documents processed successfully!")
 
 # Main chat interface
-st.title("Chat with your Documents")
+st.title("FA Knowledge ChatBot")
 st.markdown("---")
 
 if st.session_state.vector_store is None:

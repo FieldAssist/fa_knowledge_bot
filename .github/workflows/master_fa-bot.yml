@@ -83,3 +83,6 @@ jobs:
         with:
           app-name: 'fa-bot'
           slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREWEBAPP_PUBLISHPROFILE_6D2D5C2D8E4B4B7D8F5F4D2E3A1B9C7D }}
+          clean: true
+          package: .
