@@ -11,6 +11,12 @@ A powerful document-based chatbot built with Azure OpenAI and Streamlit. This bo
 - Clean and modern chat interface
 - Source citations for answers
 
+## Documentation
+
+- [Technical Architecture](docs/technical_architecture.md) - Detailed explanation of how the system works
+- [API Reference](docs/api_reference.md) - API documentation for the Azure OpenAI services used
+- [Development Guide](docs/development_guide.md) - Guide for developers who want to contribute
+
 ## Setup
 
 1. Clone the repository:
@@ -62,14 +68,43 @@ streamlit run app.py
    - No need to re-upload documents every time
    - Incrementally add new documents as needed
 
-## Technical Details
+## Technical Architecture
 
-- Built with Python 3.11
-- Uses Azure OpenAI for embeddings and chat
-- FAISS vector store for efficient similarity search
-- LangChain for document processing and chat chain
-- Streamlit for the web interface
+The system uses a sophisticated RAG (Retrieval-Augmented Generation) architecture:
+
+1. Document Processing:
+   - Text extraction from multiple formats
+   - Chunk splitting with overlap for context
+   - Azure OpenAI embeddings generation
+
+2. Vector Store:
+   - FAISS for efficient similarity search
+   - Persistent storage between sessions
+   - Incremental document addition
+
+3. Query Processing:
+   - Maximum Marginal Relevance search
+   - Context-aware response generation
+   - Source citation tracking
+
+For more details, see the [Technical Architecture](docs/technical_architecture.md) document.
 
 ## Contributing
 
-Feel free to open issues or submit pull requests for any improvements.
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+Please read our [Development Guide](docs/development_guide.md) for detailed instructions.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Azure OpenAI for providing the language models
+- LangChain for the document processing pipeline
+- FAISS for vector similarity search
+- Streamlit for the web interface
